@@ -1,0 +1,138 @@
+.text-accordion-section{
+  margin-bottom: 100px;
+  @include media("<desktop"){
+    margin-bottom: 0;
+  }
+  @include media(">=widescreen") {
+    margin-bottom: 130px;
+  }
+  .title-global-section{
+    margin-bottom: 40px;
+    @include media("<desktop"){
+      margin-top: 60px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.text-accordion-holder{
+  @include media(">tablet") {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @include media("<desktop") {
+    flex-flow: column;
+  }
+  &.holder-right{
+    flex-direction: row-reverse;
+    .accordion-holder{
+      @include media(">=tablet") {
+        padding: 0 20px 0 0;
+      }
+      @include media(">=widescreen") {
+        padding: 0 60px 0 0;
+      }
+    }
+  }
+
+
+  .text-holder{
+    padding: 0;
+    background: #ffffff;
+    @include media(">=widescreen") {
+      max-width: 378px;
+      margin: 0 -20px 60px;
+    }
+    @include media(">tablet") {
+      margin: 0 0 10px 0 !important;
+      width: 100% !important;
+    }
+    @include media("<desktop"){
+      width: 100% !important;
+    }
+    .image-block{
+      margin-top: 30px;
+    }
+    .title-block{
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      line-height: 1.4;
+      @include media(">=widescreen") {
+        font-size: 24px;
+        font-weight: 700;
+      }
+    }
+    .text-block{
+      font-size: 16px;
+      line-height: 1.65;
+      color: $black-3;
+      p{
+        margin-bottom: 18px;
+        @include media("<desktop") {
+          margin-bottom: 10px;
+        }
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+
+
+
+
+  &>.accordion-holder{
+    width: 100%;
+    @include media(">=widescreen") {
+      max-width: calc(100% - 537px);
+    }
+    @include media("<desktop"){
+      width: 100%;
+    }
+    .title-block{
+      color: $black-2;
+      margin-bottom: 36px;
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 700;
+      @include media(">=widescreen") {
+        font-size: 24px;
+      }
+    }
+  }
+  .accordion-default{
+    margin-bottom: 42px;
+    @include media(">=widescreen") {
+      margin-bottom: 65px;
+    }
+  }
+}
+.text-accordion-section {
+  .accordion-holder {
+    .text-holder{
+      p{
+        padding: 20px 20px 0 40px;
+        @include media("<tablet"){
+          padding: 20px 20px 0 15px;
+        }
+      }
+    }
+    .text-holder{
+      @include media(">=widescreen") {
+        max-width: 560px;
+      }
+    }
+    .accordion-item {
+      .accordion-opener{
+        font-size: 20px;
+        padding-left: 40px !important;
+        @include media("<tablet"){
+          padding-left: 15px !important;
+        }
+      }
+    }
+  }
+}

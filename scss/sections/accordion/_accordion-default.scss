@@ -1,0 +1,100 @@
+.accordion-default{
+  &.accordion-default-white{
+    .accordion-item{
+      margin-bottom: 28px;
+      @include media(">=widescreen") {
+        margin-bottom: 23px;
+      }
+      &.active{
+        .accordion-opener{
+          background: $light-gray;
+          padding-left: 20px;
+        }
+      }
+      .accordion-opener{
+        background: transparent;
+        border-bottom: 2px solid $light-gray;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 20px 60px 24px 0;
+        @include media(">=widescreen") {
+          padding: 20px 60px 24px 0;
+        }
+      }
+    }
+  }
+  .accordion-item{
+    margin-bottom: 8px;
+    @include media(">=widescreen") {
+      margin-bottom: 11px;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &.active{
+      .accordion-opener{
+        &:after{
+          content: '-';
+          font-size: 24px;
+          right: 22px;
+          @include media(">=widescreen") {
+            font-size: 28px;
+            right: 42px;
+          }
+        }
+      }
+      .image-holder{
+        opacity: 1;
+      }
+    }
+  }
+  .accordion-opener{
+    padding: 18px 40px 17px 16px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: $black;
+    text-decoration: none;
+    display: block;
+    background: $light-gray;
+    position: relative;
+    @include media(">=tablet") {
+      font-weight: 600;
+    }
+    @include media(">=widescreen") {
+      font-size: 24px;
+      padding: 16px 60px 20px 44px;
+    }
+    &:after{
+      content: '+';
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 0;
+      @include media(">=widescreen") {
+        font-size: 24px;
+        right: 38px;
+      }
+    }
+  }
+  .text-holder{
+    padding: 20px;
+    font-size: 16px;
+    color: $black-3;
+    line-height: 1.65;
+    font-weight: 400;
+    @include media(">=widescreen") {
+      font-weight: 400;
+      padding: 26px 80px 34px 39px;
+    }
+    p{
+      margin-bottom: 6px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}

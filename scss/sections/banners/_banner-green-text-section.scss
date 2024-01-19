@@ -1,0 +1,46 @@
+.banner-green-text-section{
+  padding: 50px 0;
+  position: relative;
+  color: $white;
+  @include media(">=widescreen") {
+    padding: 103px 0 100px;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110vw;
+    background: $green;
+    z-index: -2;
+  }
+  .text-block{
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.76;
+    margin-bottom: 46px;
+    @include media(">=widescreen") {
+      font-size: 34px;
+    }
+    p{
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    a{
+      color: $white;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  .btn{
+    &:hover{
+      background: $white;
+      color: $black;
+    }
+  }
+}

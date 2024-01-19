@@ -1,0 +1,145 @@
+.how-works-section{
+  margin-bottom: 84px;
+  padding-top: 20px;
+  @include media(">=widescreen") {
+    margin-bottom: 200px;
+    padding-top: 93px;
+  }
+  .header-holder{
+    margin-bottom: 50px;
+    @include media(">=desktop") {
+      display: flex;
+      justify-content: space-between;
+    }
+    @include media(">=widescreen") {
+      margin-bottom: 99px;
+    }
+  }
+  .text-holder{
+    width: 100%;
+    @include media(">=desktop") {
+        max-width: 50%;
+    }
+  }
+  .title-global-section{
+    margin-bottom: 24px;
+    @include media(">=desktop") {
+      margin-bottom: 20px;
+    }
+  }
+  .text-block{
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 21px;
+    color: $black-3;
+    @include media(">=desktop") {
+      margin-bottom: 0;
+    }
+    @include media(">=widescreen") {
+        font-size: 22px;
+    }
+  }
+  .anchor-holder{
+    width: 100%;
+    @include media(">=desktop") {
+      max-width: 50%;
+      padding-top: 15px;
+      padding-left: 20px;
+    }
+    @include media(">=widescreen") {
+      padding-top: 35px;
+      padding-left: 75px;
+    }
+  }
+  .image-holder{
+    @include media(">=desktop") {
+      padding: 0 15px;
+    }
+    @include media(">=widescreen") {
+      padding: 0 40px;
+    }
+  }
+}
+.fixed-position{
+  .anchor-nav-menu{
+    z-index: 100;
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -9999px;
+      right: -9999px;
+      background: $white;
+      @include media(">=desktop") {
+          display: none;
+      }
+    }
+  }
+}
+.anchor-nav-menu{
+  list-style-type: none;
+  padding: 10px 5px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .anchor-nav-item{
+    position: relative;
+    z-index: 10;
+    padding: 0 6px;
+    @include media(">=widescreen") {
+      padding: 0 7px;
+    }
+    &:nth-child(1){
+      a{
+        background-image: url("../images/how-works-section/one.svg");
+        background-size: 64px;
+        @include media(">=widescreen") {
+          background-size: 75px;
+        }
+      }
+    }
+    &:nth-child(2){
+      a{
+        background-image: url("../images/how-works-section/two.svg");
+        background-size: 66px;
+        @include media(">=widescreen") {
+          background-size: 78px;
+        }
+      }
+    }
+    &:nth-child(3){
+      a{
+        background-image: url("../images/how-works-section/three.svg");
+        background-size: 65px;
+        @include media(">=widescreen") {
+          background-size: 76px;
+        }
+      }
+    }
+  }
+  a{
+    width: 104px;
+    height: 101px;
+    border: 1px solid $light-green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: $black;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: $white;
+    background-position: 50% calc(100% - 5px);
+    background-repeat: no-repeat;
+    @include media(">=widescreen") {
+      width: 120px;
+      height: 117px;
+      font-size: 24px;
+    }
+    &:hover{
+      border-color: $black;
+    }
+  }
+}

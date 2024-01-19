@@ -1,0 +1,148 @@
+.column-text-image-section{
+  margin-bottom: 50px;
+  @include media(">=tablet") {
+    margin-bottom: 90px;
+    display: flex;
+    align-items: center;
+  }
+  &.mob-hide{
+    @include media("<tablet") {
+        display: none;
+    }
+  }
+  &.custom-margin-bottom-1{
+    @include media(">=widescreen") {
+      margin-bottom: 300px;
+    }
+  }
+  &.custom-margin-bottom-2{
+    @include media(">=widescreen") {
+      margin-bottom: 243px;
+    }
+  }
+  &.custom-margin-bottom-3{
+    @include media(">=widescreen") {
+      margin-bottom: 139px;
+    }
+  }
+  &.image-left{
+    @include media(">=tablet") {
+        flex-direction: row-reverse;
+    }
+    .text-holder{
+      @include media(">=tablet") {
+        padding-right: 0;
+      }
+      @include media(">=widescreen") {
+        padding-right: 0;
+      }
+    }
+    .image-holder{
+      @include media(">=tablet") {
+        padding-right: 30px;
+        padding-left: 0;
+        justify-content: flex-start;
+      }
+      @include media(">=widescreen") {
+        padding-right: 120px;
+        padding-left: 0;
+      }
+      &:after{
+        @include media(">=tablet") {
+          right: 30px;
+          left: auto;
+        }
+        @include media(">=widescreen") {
+          right: 120px;
+        }
+      }
+      picture{
+        @include media(">=widescreen") {
+          margin-left: -50px;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .text-holder{
+    margin-bottom: 40px;
+    width: 100%;
+    @include media(">=tablet") {
+      max-width: 50%;
+      padding-right: 20px;
+      margin-bottom: 0;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    @include media(">=widescreen") {
+      padding-bottom: 60px;
+      padding-right: 100px;
+    }
+  }
+  .image-holder{
+    position: relative;
+    margin: 0 -10px;
+    padding-top: 80px;
+    min-height: 458px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    @include media(">=tablet") {
+      width: 100%;
+      max-width: 50%;
+      margin: 0;
+      padding-left: 20px;
+      justify-content: flex-end;
+      min-height: 528px;
+    }
+    @include media(">=desktop") {
+      min-height: 578px;
+    }
+    @include media(">=widescreen") {
+      min-height: 721px;
+      padding-left: 30px;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      z-index: -1;
+      background: $light-gray;
+      top: 0;
+      bottom: 46px;
+      left: -10px;
+      right: -10px;
+      @include media(">=tablet") {
+        right: auto;
+        left: 0;
+        width: 480px;
+        bottom: 25px;
+      }
+      @include media(">=widescreen") {
+        bottom: 35px;
+      }
+    }
+    picture{
+      @include media(">=widescreen") {
+        margin-left: 0;
+        margin-right: -35px;
+      }
+    }
+  }
+  .title-global-section{
+    margin-bottom: 20px;
+    line-height: 1.3;
+    @include media(">=widescreen") {
+      margin-bottom: 42px;
+    }
+  }
+  .text-block{
+    font-size: 16px;
+    line-height: 1.65;
+    p{
+      margin-bottom: 12px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}

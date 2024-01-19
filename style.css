@@ -1,0 +1,238 @@
+/* 
+Theme Name: Flocksy Custom Theme
+Theme URI: https://github.com/elementor/hello-theme/
+Description: Hello Elementor Child is a child theme of Hello Elementor, created by Elementor team
+Author: Elementor Team
+Author URI: https://elementor.com/
+Template: hello-elementor
+Version: 1.0.1
+Text Domain: hello-elementor-child
+License: GNU General Public License v3 or later.
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready
+*/
+
+/*
+    Add your custom styles here
+*/
+
+
+body {
+    overflow-x:hidden;
+}
+table caption+thead tr:first-child td, table caption+thead tr:first-child th, table colgroup+thead tr:first-child td, table colgroup+thead tr:first-child th, table thead:first-child tr:first-child td, table thead:first-child tr:first-child th {
+    border-top: none;
+	border:none;
+}
+.contact-form-holder [type=submit]:hover, .contact-form-holder button:focus, .contact-form-holder button:hover{
+	background: #16CC8E !important;
+    border-color: #16CC8E !important; 
+    color: #FFFFFF !important;
+}
+.plan-section th {
+	border: none !important;
+}
+.plan-section td, .plan-section th {
+    padding: 0;
+	line-height: initial;
+    vertical-align: middle;
+    border: none;
+    background: transparent !important;
+}
+.anchor-nav-item a:hover {
+	color: #BCB9B0;
+}
+.btn {
+    font-size: 16px;
+    line-height: 1.19;
+    border-radius: 0;
+    font-weight: 600;
+    background: #151614;
+    padding: 16px 15px 16px 15px;
+    color: #fff;
+    border: 1px solid #151614;
+    text-decoration: none;
+    min-width: 140px;
+    position: relative;
+    text-align: center;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #16CC8E;
+    border-color: #16CC8E;
+    color:#FFFFFF;
+}
+.btn {
+    padding: 16px 42px 16px 59px;
+    text-align: left;
+}
+[type=button]:focus, [type=button]:hover, [type=submit]:focus, [type=submit]:hover, button:focus, button:hover {
+    color: initial;
+    background-color: initial;
+    text-decoration: initial;
+	outline: none !important;
+	border: none;
+}
+[type=button]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+    border: none;
+}
+.service-tabs-section .tabs li button {
+	color:#000000;
+}
+.integrations-section h3 {
+    font-size: 24px;
+    line-height: 30px;
+    color: #151614;
+    font-weight: bold;
+    font-family: "Gilroy";
+}
+.integrations-section .text-holder {
+	margin: 0 -20px 60px;
+    padding: 40px 50px 0px !important;
+    background: #F5F4F0;
+}
+.integrations-section .image-holder-inner.zapier img {
+    margin: 20px 0 50px 0 !important;
+}
+.integrations-section.slider-image-section .image-item{
+	width:100%;
+	max-width: 50%;
+}
+.slider-image-section .slide-text-header {
+    margin-bottom: 0px !important;
+}
+.integrations-section button.slick-next.slick-arrow {
+    right: 0 !important;
+    left: auto !important;
+}
+.integrations-section button.slick-prev.slick-arrow {
+    right: 85px !important;
+    left: auto !important;
+}
+.integrations-section ul.features-list.green-dots {
+    padding-left: 20px;
+}
+.integrations-section .list-block {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.integrations-section .list-block li {
+    margin-bottom: 17px;
+    padding-left: 22px;
+    position: relative;
+}
+.integrations-section .list-block.dots-green li:before {
+    background: #16CC8E;
+}
+.integrations-section .list-block li:before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #f0564c;
+}
+.custom-anchor-block-holder.active .preview-image.bg-white {
+	background:#f2f1ec;
+}
+.team-slider .slick-arrow, .team-slider .slick-arrow:hover {
+    background-color: transparent !important;
+    color: #151614 !important;
+	outline: none !important;
+}
+.custom-anchor-block-holder.active .preview-image img{
+	/*max-width: 80% !important;
+	max-height: 80% !important;*/
+	height: 80% !important;
+}
+@media (min-width: 1200px) {
+	.integrations-section .text-holder {
+		max-width: 537px;
+		padding: 40px 50px 0px !important;
+	}
+	.integrations-section h3 {
+		font-size: 24px;
+		line-height: 30px;
+		color: #151614;
+		font-weight: bold;
+		font-family: "Gilroy";
+	}
+	.integrations-section .list-block li {
+		margin-bottom: 28px;
+	}
+}
+@media (min-width: 768px){
+	.integrations-section h3 {
+		font-size: 18px;
+		line-height: 30px;
+		color: #151614;
+		font-weight: bold;
+		font-family: "Gilroy";
+	}
+	.integrations-section .text-holder {
+		margin: 0;
+		width: 100%;
+		max-width: 50%;
+	}
+    /*.container {
+		overflow: hidden;
+	}*/
+}
+@media (max-width: 768px){
+	.integrations-section .text-holder {
+		padding: 40px 50px 50px !important;
+		margin: 50px 0;
+	}    
+	.integrations-section button.slick-next.slick-arrow {
+		right: 20px !important;
+		left: auto !important;
+	}
+	.integrations-section button.slick-prev.slick-arrow {
+		right: 100px !important;
+		left: auto !important;
+	}
+    .container {
+	overflow: hidden;
+}
+}
+
+
+
+/* Services Page Change Slider Appearance */
+.page-id-26729 .custom-anchor-scroll-section .scroll-holder-block .custom-anchor-block-holder.active .custom-anchor-block {
+	width: 265px !important;
+    height: 265px !important;
+    background: #c2b9b0 !important;
+    border-color: #ffffff !important;
+    box-shadow: 0px 10px 15px #cfcfcf !important;
+}
+.page-id-26729 .custom-anchor-scroll-section .scroll-holder-block .custom-anchor-block {
+	padding: 0 !important;
+}
+.page-id-26729 .custom-anchor-scroll-section .scroll-holder-block .custom-anchor-block .preview-image img {
+	width:100% !important;
+	height:100% !important;
+}
+.page-id-26729 .custom-anchor-scroll-section .scroll-holder-block .custom-anchor-block {
+	width: 265px !important;
+    height: 265px !important;
+}
+.page-id-26729 .custom-anchor-scroll-section .scroll-holder-block .custom-anchor-block-holder {
+	width: 285px !important;
+}
+.page-id-26729 .custom-anchor-scroll-section .scroll-holder-block .custom-anchor-block-holder.active .custom-anchor-block {
+	left:55% !important;
+}
+.page-id-26729 .custom-anchor-scroll-section .scroll-holder-block .custom-anchor-block-holder:first-child.active+.custom-anchor-block-holder .custom-anchor-block {
+	left: calc(100% - 245px) !important;
+}
+.page-id-26729 .custom-anchor-scroll-section .scroll-holder-block .custom-anchor-block-holder:first-child.active .custom-anchor-block {
+	left:10% !important;
+}

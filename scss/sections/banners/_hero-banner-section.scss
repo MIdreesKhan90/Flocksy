@@ -1,0 +1,211 @@
+.hero-banner-section{
+  margin-bottom: 18px;
+  padding-top: 27px;
+  overflow: hidden;
+  @include media("<tablet"){
+    overflow: hidden;
+  }
+  @include media(">=tablet") {
+    margin-bottom: 20px;
+  }
+  @include media(">=widescreen") {
+    padding-top: 46px;
+    margin-bottom: 28px;
+  }
+  &.is-video{
+    margin-bottom: 50px;
+    @include media(">=widescreen") {
+      margin-bottom: 149px;
+    }
+    .text-holder{
+      margin-bottom: 34px;
+    }
+    .title-block{
+      min-height: 0;
+      margin-bottom: 13px;
+      @include media(">=widescreen") {
+        margin-bottom: 20px;
+      }
+    }
+    .text-block{
+      display: block;
+      margin-bottom: 0;
+    }
+  }
+  &.custom-section{
+    padding-top: 70px;
+    margin-bottom: 105px;
+    @include media(">=widescreen") {
+      padding-top: 92px;
+      margin-bottom: 129px;
+    }
+    .title-block{
+      min-height: 0;
+      margin-bottom: 13px;
+      @include media(">=widescreen") {
+        margin-bottom: 20px;
+      }
+    }
+    .text-block{
+      display: block;
+      @include media(">=tablet") {
+        margin-bottom: 53px;
+      }
+    }
+    .image-holder{
+      height: auto;
+      text-align: center;
+      margin-top: 15px;
+      picture{
+        display: inline-block;
+      }
+    }
+  }
+  &.custom-margin-bottom{
+    margin-bottom: 40px;
+    padding-top: 27px;
+    @include media(">=widescreen") {
+      margin-bottom: 40px;
+      padding-top: 46px;
+    }
+    .image-holder{
+      height: auto;
+      text-align: center;
+      picture{
+        margin: 0 -20px;
+        display: inline-block;
+        @include media(">=fullscreen") {
+          margin: 0 -100px;
+        }
+      }
+    }
+  }
+  .text-holder{
+    margin-bottom: 59px;
+    position: relative;
+    z-index: 10;
+    @include media(">=widescreen") {
+      margin-bottom: 0;
+    }
+  }
+
+  .title-block{
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    @include media(">=375px") {
+      font-size: 44px;
+    }
+    @include media(">=tablet") {
+        min-height: 115px;
+    }
+    @include media(">=widescreen") {
+      min-height: 0;
+      font-size: 64px;
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+    .string-replacement{
+      font-weight: 900;
+      position: relative;
+      display: inline-block;
+      transition: width 0.2s linear;
+      span{
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+        &.animate{
+          transition: opacity 0.5s 0.2s linear;
+          opacity: 1;
+          position: static;
+        }
+      }
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 220px;
+        height: 25px;
+        background-image: url("../images/decor/decor-string.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+      }
+    }
+  }
+  .text-block{
+    display: none;
+    @include media(">=tablet") {
+      color: $black-3;
+      font-size: 18px;
+      display: block;
+      line-height: 1.6;
+      margin-bottom: 36px;
+    }
+    @include media(">=widescreen") {
+      font-size: 22px;
+    }
+  }
+  .btn{
+    width: 100%;
+    @include media(">=tablet") {
+      width: auto;
+    }
+    @include media("<tablet") {
+      text-align: center;
+      padding:16px 0 !important;
+    }
+  }
+  .image-holder{
+    height: 170px;
+    position: relative;
+    @include media(">=phone") {
+      height: 200px;
+    }
+    @include media(">=tablet") {
+      height: 270px;
+    }
+    @include media(">=desktop") {
+      height: 400px;
+    }
+    @include media(">=widescreen") {
+      height: 530px;
+    }
+    &.custom-margin-top{
+      margin-top: -40px;
+      @include media(">=widescreen") {
+        margin-top: -140px;
+      }
+    }
+    .lottie-custom{
+      width: 125%;
+      position: absolute;
+      top: 50%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+      @include media(">=widescreen") {
+        width: 1690px;
+      }
+      @include media("<desktop") {
+        width: 100% !important;
+      }
+    }
+  }
+  .video-holder{
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    .video-block{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+    }
+  }
+}

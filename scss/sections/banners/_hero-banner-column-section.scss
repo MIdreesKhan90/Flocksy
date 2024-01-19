@@ -1,0 +1,63 @@
+.hero-banner-column-section{
+  margin-bottom: 145px;
+  padding-top: 50px;
+  @include media(">=tablet") {
+    display: flex;
+    align-items: center;
+  }
+  @include media(">=widescreen") {
+    margin-bottom: 196px;
+    padding-top: 75px;
+  }
+  .text-holder{
+    width: 100%;
+    margin-bottom: 60px;
+    @include media(">=tablet") {
+      margin-bottom: 0;
+      padding: 20px 15px 40px 0;
+      max-width: 300px;
+    }
+    @include media(">=desktop") {
+      max-width: 416px;
+      padding: 20px 10px 60px 0;
+    }
+    @include media(">=widescreen") {
+      padding: 20px 10px 160px 0;
+    }
+  }
+  .title-global-section{
+    margin-bottom: 12px;
+    @include media(">=widescreen") {
+      margin-bottom: 22px;
+    }
+    strong{
+      font-weight: 600;
+    }
+  }
+  .text-block{
+    font-size: 16px;
+    line-height: 1.65;
+    @include media(">=widescreen") {
+        font-size: 22px;
+    }
+  }
+  .image-holder{
+    margin: 0 -5px;
+    text-align: center;
+    @include media(">=tablet") {
+      margin: 0;
+      width: calc(100% - 310px);
+    }
+    @include media(">=desktop") {
+      width: calc(100% - 416px);
+    }
+  }
+  .image-block{
+    @include media(">=tablet") {
+      margin-right: -20px;
+    }
+    @include media(">=fullscreen") {
+      margin-right: -145px;
+    }
+  }
+}

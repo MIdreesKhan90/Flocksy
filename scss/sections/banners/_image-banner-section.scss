@@ -1,0 +1,11 @@
+.image-banner-section{
+  margin-bottom: 100px;
+  @include media(">=widescreen") {
+    margin-bottom: 150px;
+  }
+  .image-holder{
+    @include media(">=fullscreen") {
+      margin: 0 -70px;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.journey-section{
+  margin-bottom: -10px;
+  @include media(">=tablet") {
+    margin-bottom: 50px;
+  }
+  @include media(">=widescreen") {
+    margin-bottom: 157px;
+  }
+  .title-global-section{
+    margin-bottom: 69px;
+    @include media(">=tablet") {
+      margin-bottom: 79px;
+    }
+  }
+
+  .journey-scroll-holder{
+    margin: 0 -20px;
+    padding-bottom: 51px !important;
+    display: flex;
+    outline: none;
+    @include media(">=phone") {
+      margin: 0 -20px 0 -10px;
+    }
+    @include media(">=widescreen") {
+      padding-bottom: 60px !important;
+      margin: 0 calc(590px - 50vw) 0 0;
+    }
+    &.scroll-pane{
+      .jspPane{
+        display: flex;
+        @include media(">=widescreen") {
+          margin-left: -10px;
+        }
+      }
+    }
+    .journey-item{
+      padding: 0 20px;
+      width: 375px;
+      flex-shrink: 0;
+      @include media(">=phone") {
+        padding: 0 10px;
+      }
+      @include media(">=tablet") {
+        width: 400px;
+      }
+    }
+  }
+}
+.journey-holder{
+  height: 100%;
+  background: $light-gray;
+  padding: 40px 20px 38px;
+  @include media(">=widescreen") {
+    padding: 40px 40px 35px;
+  }
+  .image-block{
+    height: 115px;
+    margin-bottom: 40px;
+    img{
+      height: 100%;
+      width: auto;
+    }
+  }
+  .year-block{
+    font-size: 64px;
+    margin-bottom: 21px;
+    font-weight: 600;
+    line-height: 1;
+  }
+  .text-block{
+    font-size: 16px;
+    line-height: 1.65;
+  }
+}

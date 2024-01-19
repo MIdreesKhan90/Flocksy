@@ -1,0 +1,371 @@
+$breakpoints: (
+        'xs-phone': 320px,
+        'phone': 480px,
+        'tablet': 768px,
+        'desktop': 1024px,
+        'widescreen': 1200px,
+        'fullscreen': 1500px
+);
+
+// keywords
+$media-expressions: (
+        'screen': 'screen',
+        'print': 'print',
+        'handheld': 'handheld',
+        'landscape': '(orientation: landscape)',
+        'portrait': '(orientation: portrait)',
+        'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+        'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+// ligatured operators ≥ ≤
+
+@import 'vendors/include-media';
+@import 'vendors/normalize';
+@import 'vendors/slick';
+@import 'vendors/jScrollPane';
+@import 'vendors/fancybox';
+
+@import 'base/variables';
+@import 'base/functions';
+@import 'base/mixins';
+@import 'base/helpers';
+@import 'base/reset';
+@import 'base/forms';
+@import 'base/typography';
+
+@import 'vendors/fonts';
+@import 'vendors/hamburger';
+@import 'layout/audio-container';
+
+@import 'sections/scroll-holder-section';
+@import 'sections/custom-anchor-scroll-section';
+@import 'sections/banners/get-help-section';
+@import 'sections/portfolio-tabs-section';
+@import 'sections/slider/testimonial-slider-section';
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/common';
+@import 'layout/buttons';
+@import 'layout/print';
+
+.resize-active {
+  * {
+    transition: none !important;
+  }
+}
+
+.vertical-portfolio ul.portfolio-tabset {
+  width: 30% !important;
+  display: inline-block;
+  padding-left: 0;
+  list-style: none;
+  padding-right: 20px;
+  vertical-align: top;
+}
+
+.accordion {
+  width: 100%;
+  max-width: 460px;
+  margin: 0px auto;
+  background: #FFF;
+  padding-right: 20px;
+}
+
+#accordion > li.firstt button.active {
+  background: #00CD8C;
+  color: #fff;
+  font-size: 18px !important;
+  padding-left: 15px;
+  border-radius: 0px;
+}
+
+#accordion > li.firstt button {
+  background: #fff;
+  color: #000;
+  font-size: 18px !important;
+  padding-left: 15px;
+}
+
+#accordion > li.firstt button::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #555;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+#accordion > li.firstt button.active::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.accordion .link {
+  cursor: pointer;
+  display: block;
+  padding: 20px 15px 20px 15px;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.accordion .link::after {
+  display: none;
+}
+
+.accordion li .link::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #555;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.accordion li.open .link::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.accordion li.open .link {
+  background: #00CD8C;
+  color: #fff;
+}
+
+.portfolio-tabset .portfolio-tabset-item button {
+  display: block;
+  padding: 20px 20px 20px 50px;
+  font-size: 15px;
+  color: #000;
+  white-space: nowrap;
+  width: 100%;
+  text-align: left;
+  border-radius: 0px;
+}
+
+.accordion li i {
+  position: absolute;
+  top: 16px;
+  left: 12px;
+  font-size: 18px;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  color: #00CD8C;
+}
+
+.accordion li.open i {
+  color: #fff;
+}
+
+.accordion li:last-child .link {
+  border-bottom: 0;
+}
+
+.accordion li i.fa-chevron-down {
+  right: 24px;
+  left: auto;
+  font-size: 16px;
+  top: 22px;
+}
+
+.accordion li.open i.fa-chevron-down {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/**
+ * Submenu
+ -----------------------------*/
+.submenu {
+  display: none;
+  background: #fff;
+  font-size: 16px;
+  padding-left: 0;
+}
+
+.submenu li {
+  border-bottom: 1px solid #ddd;
+  list-style: none;
+}
+
+.submenu button {
+  display: block;
+  padding-left: 42px;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.submenu button:hover {
+  background: #00CD8C;
+  color: #FFF;
+}
+
+@media only screen and (max-width: 768px) {
+  .vertical-portfolio ul.portfolio-tabset {
+    width: 100% !important;
+    display: block;
+    padding-left: 0;
+    list-style: none;
+    padding-right: 0;
+  }
+  .vertical-portfolio .portfolio-tab-content {
+    width: 100%;
+    float: unset;
+  }
+}
+
+@media (max-width: 832px) {
+  .for-mobile {
+    margin-top: 0 !important;
+    min-height: 320px !important;
+    .portfolio-scroll-content {
+      margin: 0;
+    }
+  }
+
+  .vertical-portfolio {
+    ul {
+      &.portfolio-tabset {
+        overflow: hidden;
+      }
+    }
+  }
+  .accordion{
+    max-width: 100% !important;
+  }
+  .vertical-portfolio ul.portfolio-tabset{
+    width: 100% !important;
+  }
+  .vertical-portfolio .portfolio-tab-content{
+    width: 100% !important;
+    display: block;
+  }
+}
+.portfolio-list {
+  .portfolio-item{
+    @include media(">=desktop"){
+      max-width: 34% !important;
+    }
+  }
+}
+.popup-content .preview-image {
+  max-width: auto !important;
+}
+@media (min-width: 1200px) {
+  .popup-content .preview-image, .popup-content .preview-video {
+    margin: -40px auto !important;
+  }
+}
+.preview-copywriting{
+  width: 1000px;
+  margin: -40px auto 0 auto;
+}
+.audio-container{
+  background-image: url("https://flocksy.com/wp-content/uploads/2022/12/voice-over-mockup-background-1.png");
+  background-size: cover;
+  height: 415px;
+  max-width: 500px;
+  position: relative;
+}
+.popup-content .popup-audio-holder{
+  height: 415px;
+  max-width: 500px;
+}
+.audio-container .audio-control {
+  padding: 0;
+  position: relative;
+  background: #Ffff;
+  display: flex;
+  align-items: center;
+  height: 33px;
+  width: 378px;
+  bottom: -279px;
+  left: 61px;
+}
+.audio-container .volume-block .audio-mute{
+  background-image: url("https://flocksy.com/wp-content/uploads/2022/12/voice-over-mockup-1.png");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+.audio-container .volume-block{
+  flex-flow: column-reverse;
+  background-color: transparent;
+  bottom: -18px;
+  left: 320px;
+  right: 0;
+  z-index: 10;
+}
+.audio-container .volume-block .audio-volume {
+  width: 87px;
+  height: 5px;
+  background: #fff;
+  transform: rotate(90deg);
+  margin-bottom: 55px;
+}
+@media (min-width: 768px){
+  .audio-container .audio-play {
+    width: 25px;
+    height: 25px;
+    background: #16CC8E;
+    top: 0;
+    left: 0;
+  }
+  .audio-container .audio-play:after {
+    border-left: 11px solid #fff;
+    border-bottom: 7px solid transparent;
+    border-top: 7px solid transparent;
+    left: calc(40% + 5px);
+  }
+  .audio-container .audio-play:before{
+    background-color: #FFFFFF;
+
+  }
+  .audio-container .audio-play:before{
+    width: 14px;
+    height: 14px;
+    background: linear-gradient(to right, #16CC8E 5px, #fff 3px, #16CC8E 11px, #fff 11px);
+    left: 43%;
+  }
+}
+
+.audio-container .audio-progress{
+  width: 250px;
+  height: 10px;
+  background: #e2dfd2;
+  top: 0;
+  left: -48px;
+}
+.audio-container .audio-progress .slide-progress{
+  background: #16CC8E;
+}

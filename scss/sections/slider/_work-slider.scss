@@ -1,0 +1,26 @@
+.work-slide-item{
+  background-color: transparent;
+  .work-slide-body{
+    padding: 6px;
+  }
+  .img-box{
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.work-slider{
+  padding-bottom: 60px;
+  .slick-arrow{
+    position: absolute;
+    bottom: 0;
+    &.slick-next{
+      right: 10px;
+    }
+    &.slick-prev{
+      right: 107px;
+    }
+  }
+}

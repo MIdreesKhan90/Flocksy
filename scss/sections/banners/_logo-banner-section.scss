@@ -1,0 +1,200 @@
+.logo-banner-section {
+  padding: 12px 0 12px;
+  position: relative;
+  margin-bottom: 80px;
+  @include media(">=tablet") {
+    padding: 60px 0 55px;
+    margin-bottom: 140px;
+  }
+  @include media(">=widescreen") {
+    margin-bottom: 203px;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120vw;
+    background: $bg-gray;
+    opacity: 0.4;
+    z-index: -1;
+    @include media("<desktop") {
+      width: 100% !important;
+    }
+  }
+  &.custom-section {
+    margin-bottom: 50px;
+    @include media(">=tablet") {
+      padding: 27px 0 22px;
+      margin-bottom: 150px;
+    }
+
+    .logo-list {
+      padding: 0 20px;
+      overflow-x: hidden;
+      .logo-item {
+        margin-right: 30px;
+        @include media("<desktop") {
+          margin-right: 10px !important;;
+          display: none;
+          + .logo-item {
+            width: 25% !important;
+          }
+          &:first-of-type {
+            width: 100%;
+            text-align: center;
+          }
+          &:last-child {
+            @include media("<desktop") {
+              padding-right: 0px;
+            }
+          }
+          @include media(">=widescreen") {
+            max-width: 205px;
+          }
+          &:last-child {
+            margin-right: 0;
+            @include media("<desktop") {
+              min-width: 23% !important;
+            }
+          }
+          &:nth-child(5){
+            @include media("<desktop"){
+              display: block;
+            }
+          }
+          &:nth-child(6){
+            @include media("<desktop"){
+              display: block;
+            }
+          }
+          &:nth-child(7){
+            @include media("<desktop"){
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    .logo-list {
+      list-style-type: none;
+      padding: 20px 20px 20px 0;
+      margin: 0 -20px 0 0;
+      display: flex;
+      align-items: center;
+      width: calc(100% + 20px);
+      overflow-x: hidden;
+      @include media(">=widescreen") {
+        justify-content: space-between;
+      }
+      @include media("<desktop") {
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .logo-item {
+        margin-right: 60px;
+        @include media("<desktop") {
+          margin-right: 10px !important;;
+          + .logo-item {
+            width: 25% !important;
+          }
+          &:first-of-type {
+            width: 100%;
+            text-align: center;
+          }
+          &:last-child {
+            @include media("<desktop") {
+              padding-right: 0px;
+            }
+          }
+          img {
+            object-fit: cover;
+          }
+        }
+        &:last-child {
+          margin-right: 0;
+          padding-right: 20px;
+          @include media("<desktop") {
+            padding-right: 0px !important;
+          }
+          @include media(">=desktop") {
+            padding-right: 0;
+          }
+        }
+        &.logo-item-big {
+          @include media(">=tablet") {
+            min-width: 140px;
+          }
+        }
+      }
+      a {
+        display: block;
+        line-height: 0;
+        opacity: 1;
+        transition: 0.3s;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  .logo-section {
+    margin-bottom: 80px;
+    @include media(">=widescreen") {
+      margin-bottom: 151px;
+    }
+    .title-global-section {
+      margin-bottom: 40px;
+      @include media(">=widescreen") {
+        margin-bottom: 80px;
+      }
+    }
+    .logo-list {
+      padding: 12px 0 12px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      list-style-type: none;
+      margin: 0 -20px;
+      position: relative;
+      overflow-x: hidden;
+      @include media(">=tablet") {
+        padding: 62px 0 20px;
+        margin: 0 -20px;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120vw;
+        background: $bg-gray;
+        opacity: 0.4;
+        z-index: -1;
+      }
+      .logo-item {
+        padding: 0 20px;
+        margin-bottom: 30px;
+        text-align: center;
+        @include media(">=tablet") {
+          margin-bottom: 53px;
+        }
+        @include media("<tablet") {
+          max-width: 50% !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px){
+  .logo-banner-section.custom-section {
+    margin-bottom: 30px;
+  }
+}

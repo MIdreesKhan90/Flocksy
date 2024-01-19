@@ -1,0 +1,208 @@
+.is-active-menu{
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @include media(">=desktop") {
+    position: static;
+    overflow: visible;
+  }
+  .header{
+    .menu-holder{
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.header{
+  padding: 26px 0;
+  @include media(">=desktop") {
+    padding: 32px 0;
+  }
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &.container-big{
+      .logo{
+        @include media(">=fullscreen") {
+            max-width: 150px;
+        }
+      }
+      .menu{
+        @include media(">=fullscreen") {
+          margin-right: 95px;
+        }
+        li{
+          @include media(">=fullscreen") {
+            margin: 0 30px;
+          }
+        }
+      }
+      .btn{
+        @include media(">=fullscreen") {
+          padding-top: 15px;
+          padding-bottom: 15px;
+          min-width: 140px;
+        }
+      }
+    }
+  }
+  .logo{
+    width: 100%;
+    max-width: 92px;
+    position: relative;
+    z-index: 110;
+    @include media(">=tablet") {
+        max-width: 120px;
+    }
+    img{
+      width: 100%;
+    }
+  }
+  .hamburger{
+    z-index: 110;
+    position: relative;
+    @include media(">=desktop") {
+      display: none;
+    }
+  }
+  .menu-holder{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $light-gray;
+    z-index: 100;
+    padding: 160px 20px 200px;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    @media ( max-height: 500px ) {
+      padding: 100px 20px 50px;
+    }
+    @include media(">=desktop") {
+      padding: 0;
+      background: transparent;
+      position: static;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .menu-block{
+    height: 100%;
+    overflow-y: auto;
+    @include media(">=desktop") {
+      display: flex;
+      align-items: center;
+      overflow: visible;
+    }
+  }
+  .menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    @include media(">=desktop") {
+      display: flex;
+      align-items: center;
+    }
+    @include media(">=widescreen") {
+      margin-right: 88px;
+    }
+    li{
+      margin: 0 0 32px;
+      text-align: center;
+      @include media(">=desktop") {
+        margin: 0 20px;
+      }
+      &.active{
+        a{
+          &:after{
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+    a{
+      font-size: 24px;
+      font-weight: 700;
+      color: $black;
+      text-decoration: none;
+      position: relative;
+      @include media(">=desktop") {
+          font-size: 16px;
+      }
+      &:hover{
+        &:after{
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      &:after{
+        @include media(">=desktop") {
+          content: '';
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: $green;
+          position: absolute;
+          left: 50%;
+          bottom: -10px;
+          transform: translateX(-50%);
+          opacity: 0;
+          visibility: hidden;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+
+  .menu-btn{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    @media ( max-height: 500px ) {
+      position: static;
+      transform: translateX(0);
+    }
+    @include media(">=desktop") {
+      position: static;
+      transform: translateX(0);
+      display: flex;
+      align-items: center;
+      margin: 0 -10px;
+    }
+    li{
+      margin: 0 0 20px;
+      text-align: center;
+      @include media(">=desktop") {
+        margin: 0 10px;
+      }
+      &:last-child{
+        margin: 0;
+        @include media(">=desktop") {
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+  .btn{
+    min-width: 160px;
+    padding: 10px 15px 11px;
+    @include media(">=desktop") {
+        min-width: 110px;
+    }
+  }
+  .btn-outline-gray{
+    background: $white;
+  }
+}

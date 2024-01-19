@@ -1,0 +1,214 @@
+.contact-section{
+  margin-bottom: 100px;
+  @include media(">=widescreen") {
+    margin-bottom: 165px;
+  }
+  .text-holder{
+    margin-bottom: 52px;
+    p{
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  .title-global-section{
+    line-height: 1.2;
+    margin-bottom: 8px;
+    font-weight: 400;
+    strong{
+      font-weight: 700;
+    }
+  }
+  .text-block{
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+.contact-holder{
+  @include media(">=tablet") {
+    display: flex;
+    margin: 0 -10px;
+  }
+  @include media(">=widescreen") {
+    margin: 0 -30px;
+  }
+  .contact-text-block{
+    margin-bottom: 20px;
+    width: 100%;
+    @include media(">=tablet") {
+      margin-bottom: 0;
+      padding: 0 10px;
+      max-width: 50%;
+    }
+    @include media(">=desktop") {
+        max-width: 500px;
+    }
+    @include media(">=widescreen") {
+      padding: 0 30px;
+    }
+  }
+  .contact-text-holder{
+    padding: 20px 20px 30px;
+    height: 100%;
+    @include media(">=widescreen") {
+      padding: 45px 25px 30px;
+    }
+    &.custom-block{
+      @include media(">=widescreen") {
+        padding: 25px 23px 30px;
+      }
+    }
+    &.bg-green{
+      a, p, li{
+        color: $white;
+      }
+    }
+    .image-block{
+      margin: 0 -9px 40px;
+      @include media(">=widescreen") {
+        margin: 0 -14px 72px;
+      }
+    }
+    a, p, li{
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 15px;
+      line-height: 1.2;
+      @include media(">=widescreen") {
+        font-size: 22px;
+        margin-bottom: 27px;
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    a{
+      @extend .hover-decor-line;
+      display: inline-block;
+      vertical-align: top;
+      text-decoration: none;
+    }
+    ul{
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    li{
+      padding-left: 35px;
+      position: relative;
+      margin-bottom: 15px;
+      @include media(">=widescreen") {
+        margin-bottom: 19px;
+      }
+      &:before{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 20px;
+        height: 14px;
+        background-size: contain;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-image: url("../images/icon-check.svg");
+      }
+    }
+    .questions-image-block{
+      margin-bottom: 25px;
+      text-align: center;
+      line-height: 0;
+    }
+    .questions-text{
+      line-height: 1.2;
+      p{
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      p, li{
+        font-size: 16px;
+      }
+    }
+  }
+  .contact-form-block{
+    width: 100%;
+    @include media(">=tablet") {
+      padding: 0 10px;
+      max-width: 50%;
+    }
+    @include media(">=desktop") {
+      max-width: calc(100% - 480px);
+    }
+    @include media(">=widescreen") {
+      padding: 0 30px;
+    }
+  }
+  .contact-form-message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: $white;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    padding: 20px 30px;
+    @include media(">=widescreen") {
+        font-size: 22px;
+    }
+    p, a{
+      font-size: 16px;
+      @include media(">=widescreen") {
+        font-size: 22px;
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  .contact-form-holder{
+    padding: 17px 35px 40px 30px;
+    border: 1px solid $gray-2;
+    height: 100%;
+    position: relative;
+    @include media(">=widescreen") {
+        border-width: 2px;
+    }
+    .form-row{
+      margin-bottom: 29px;
+    }
+    p{
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 45px;
+    }
+    label{
+      cursor: pointer;
+      color: $black;
+      display: block;
+      margin-bottom: 11px;
+    }
+    .form-control{
+      border-color: $gray-2;
+      margin-bottom: 0;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      line-height: 1.2;
+      @include media(">=widescreen") {
+        border-width: 2px;
+      }
+    }
+    textarea{
+      height: 165px;
+      min-height: 165px;
+    }
+    [type="submit"]{
+      margin-top: 23px;
+    }
+  }
+}

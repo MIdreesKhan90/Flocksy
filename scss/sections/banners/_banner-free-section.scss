@@ -1,0 +1,128 @@
+.banner-free-section{
+  position: relative;
+  background: rgba($gray, 0.4);
+  padding: 40px 10px 50px;
+  margin-bottom: 100px;
+  @include media(">=tablet") {
+    padding: 40px 100px 50px;
+  }
+  @include media(">=desktop") {
+    padding: 40px 200px 50px;
+  }
+  @include media(">=widescreen") {
+    padding: 70px 250px 80px;
+    margin-bottom: 149px;
+  }
+  .title-global-section{
+    margin-bottom: 28px;
+
+  }
+  .image-block{
+    display: none;
+    @include media(">=tablet") {
+      display: block;
+      max-width: 177px;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+    @include media(">=desktop") {
+
+    }
+    @include media(">=widescreen") {
+      max-width: 357px;
+    }
+    &.image-left{
+      left: 0;
+      transform: translate(-50%, -50%);
+      @include media(">=desktop") {
+        transform: translate(-20%, -50%);
+      }
+      @include media(">=widescreen") {
+        transform: translate(-50%, -50%);
+      }
+    }
+    &.image-right{
+      right: 0;
+      transform: translate(50%, -50%);
+      @include media(">=desktop") {
+        transform: translate(20%, -50%);
+      }
+      @include media(">=widescreen") {
+        transform: translate(50%, -50%);
+      }
+    }
+  }
+  .banner-free-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 17px;
+    font-size: 16px;
+    font-weight: 400;
+    @include media(">=phone") {
+      font-size: 14px;
+    }
+    @include media(">=tablet") {
+      font-size: 16px;
+    }
+    &.only-column{
+      @include media(">=phone") {
+          column-count: 1;
+      }
+    }
+    li{
+      padding: 0 15px;
+      margin-bottom: 5px;
+      @include media(">=desktop") {
+        padding: 0 30px;
+      }
+    }
+  }
+
+  .btn{
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    @include media(">=tablet") {
+      min-width: 232px;
+    }
+    &:before{
+      position: static;
+      transform: translate(0, 0);
+      margin-right: 10px;
+      margin-top: 6px;
+    }
+    &:after{
+      display: none;
+    }
+  }
+}
+.banner-free-section{
+  padding-left: 200px;
+  padding-right: 200px;
+  @include media("<tablet"){
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  h3.title-global-section{
+    font-size: 46px;
+  }
+  h2.title-global-section{
+    @include media("<tablet"){
+      font-size: 30px;
+    }
+  }
+  .banner-free-list{
+    li:first-child:nth-last-child(n + 7),
+    li:first-child:nth-last-child(n + 7) ~ li{
+      column-count: unset;
+      display: inline-block;
+      width: 50%;
+
+      @include media("<tablet") {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}

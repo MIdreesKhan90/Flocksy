@@ -1,0 +1,87 @@
+.accordion-section{
+  margin-bottom: 116px;
+  position: relative;
+  @include media(">=widescreen") {
+    margin-bottom: 218px;
+  }
+  .title-global-section{
+    margin-bottom: 60px;
+    @include media(">=tablet") {
+      margin-bottom: 0;
+    }
+    @include media(">=widescreen") {
+      margin-bottom: -25px;
+      max-width: calc(100% - 700px);
+    }
+  }
+  .accordion-default{
+    position: relative;
+    padding: 215px 0 0 0;
+    @include media(">=tablet") {
+      padding: 0 0 0 50%;
+    }
+    @include media(">=widescreen") {
+      padding: 0 0 0 calc(100% - 680px);
+    }
+  }
+  .image-holder{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 170px;
+    opacity: 0;
+    @include media(">=tablet") {
+      top: auto;
+      left: 0;
+      bottom: 30%;
+      height: auto;
+      max-height: 300px;
+      width: calc(50% - 30px);
+    }
+    @include media(">=widescreen") {
+      left: -2%;
+      bottom: 23%;
+      max-width: calc(100% - 705px);
+    }
+    .lottie-custom{
+      margin: 0 auto;
+      &.lottie01{
+        width: 333px;
+        height: 169px;
+        @include media(">=tablet") {
+          width: 340px;
+          height: 179px;
+        }
+        @include media(">=widescreen") {
+          width: 433px;
+          height: 219px;
+        }
+      }
+      &.lottie02{
+        width: 333px;
+        height: 179px;
+        @include media(">=tablet") {
+          width: 340px;
+          height: 183px;
+        }
+        @include media(">=widescreen") {
+          width: 375px;
+          height: 237px;
+        }
+      }
+      &.lottie03{
+        width: 335px;
+        height: 187px;
+        @include media(">=tablet") {
+          width: 340px;
+          height: 189px;
+        }
+        @include media(">=widescreen") {
+          width: 400px;
+          height: 252px;
+        }
+      }
+    }
+  }
+}

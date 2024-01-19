@@ -1,0 +1,157 @@
+.what-we-do-section{
+  padding: 40px 0 50px;
+  color: $white;
+  position: relative;
+  @include media(">=widescreen") {
+    padding: 57px 0 60px;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110vw;
+    background: $green;
+    z-index: -2;
+  }
+  .what-we-do-header{
+    margin-bottom: 50px;
+    width: 100%;
+    @include media(">=widescreen") {
+      margin-bottom: 100px;
+    }
+  }
+  .title-global-section{
+    margin-bottom: 16px;
+    &:only-child{
+      margin-bottom: 0;
+    }
+  }
+  .what-we-do-body{
+    @include media(">=tablet") {
+      display: flex;
+    }
+  }
+  .text-holder{
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    @include media(">=tablet") {
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-right: 50px;
+    }
+    @include media(">=widescreen") {
+      padding-right: 100px;
+      font-size: 24px;
+    }
+    ul{
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    li{
+      margin-bottom: 22px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    P{
+      margin-bottom: 10px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    .text-body{
+      margin-bottom: 30px;
+    }
+    .text-footer{
+      @include media(">=tablet") {
+        padding-bottom: 40px;
+      }
+      @include media(">=widescreen") {
+        padding-bottom: 139px;
+      }
+    }
+    .small{
+      font-size: 14px;
+    }
+    .text-icon{
+      padding-left: 45px;
+      position: relative;
+      .icon-block{
+        position: absolute;
+        top: -4px;
+        left: 0;
+        width: 30px;
+      }
+    }
+  }
+  .scroll-holder{
+    width: 100%;
+    @include media(">=tablet") {
+      max-width: 50%;
+    }
+    @include media(">=desktop") {
+      max-width: calc(100% - 400px);
+    }
+    .jspHorizontalBar{
+      @include media(">=widescreen") {
+        bottom: 8px;
+      }
+    }
+    .jspHorizontalBar, .jspTrack, .jspDrag{
+      background: $white;
+    }
+    .jspDrag:after{
+      @include media(">=widescreen") {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+  .scroll-holder-block{
+    overflow-x: auto;
+    overflow-y: visible;
+    padding-bottom: 40px!important;
+    margin-bottom: -40px;
+    outline: none;
+    @include media(">=widescreen") {
+      padding-bottom: 86px!important;
+      margin-bottom: -86px;
+    }
+    .jspPane{
+      display: flex;
+    }
+    .item-holder{
+      margin-right: 20px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+    .item-block{
+      height: 458px;
+      width: 335px;
+      background: $white;
+      padding: 20px 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      @include media(">=tablet") {
+        width: 350px;
+        height: 478px;
+      }
+      @include media(">=widescreen") {
+        height: 520px;
+        width: 380px;
+      }
+    }
+  }
+}

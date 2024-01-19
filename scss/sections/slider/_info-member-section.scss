@@ -1,0 +1,676 @@
+.info-member-section {
+  margin: 0 0 100px;
+  margin-bottom: 150px !important;
+  @include media(">=tablet") {
+    display: flex;
+    //align-items: flex-end;
+    margin: 0 -10px 100px;
+  }
+  @include media(">=widescreen") {
+    margin: 0 -10px 157px;
+  }
+  .text-holder {
+    margin-bottom: 40px;
+    @include media(">=tablet") {
+      margin-bottom: 0;
+      max-width: 25%;
+      //margin-top: -13px;
+      padding: 0 10px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-self: stretch;
+    }
+    @include media(">=widescreen") {
+      padding-bottom: 78px;
+    }
+    &.pb-0 {
+      padding-bottom: 0;
+    }
+  }
+  .title-global-section {
+    margin-bottom: 20px;
+    @include media(">=tablet") {
+      margin-bottom: 32px;
+    }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      font-size: 32px;
+    }
+  }
+  .text-block {
+    line-height: 2;
+    strong {
+      font-weight: 600;
+    }
+  }
+  .image-block {
+    line-height: 0;
+    text-align: center;
+  }
+  .slider-holder {
+    @include media(">=tablet") {
+      max-width: 75%;
+      padding: 0 10px;
+    }
+  }
+}
+
+.sales-list-slider, .member-list-slider, .member-work-slider {
+  padding-bottom: 50px;
+  @include media(">=phone") {
+    margin: 0 -10px;
+  }
+  @include media(">=widescreen") {
+    padding-bottom: 78px;
+  }
+  .slick-arrow {
+    position: absolute;
+    bottom: 0;
+    &.slick-next {
+      right: 0;
+      @include media(">=tablet") {
+        right: 10px;
+      }
+    }
+    &.slick-prev {
+      right: 97px;
+      @include media(">=tablet") {
+        right: 107px;
+      }
+    }
+  }
+  .member-item, .sales-item {
+    padding: 0 2px;
+    @include media(">=phone") {
+      padding: 0 10px;
+    }
+  }
+}
+
+.member-list-slider {
+  .member-holder {
+    border: 2px solid $gray;
+  }
+  .member-header {
+    padding: 10px 10px 18px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    .member-image {
+      width: 100%;
+      max-width: 89px;
+      line-height: 0;
+      @include media(">=widescreen") {
+        max-width: 110px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .member-text {
+      padding: 47px 0 0 21px;
+    }
+    .name-block {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.45;
+      margin-bottom: 7px;
+    }
+    .position-block {
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+    .level-block {
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      background: $green;
+      color: $white;
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 1;
+      padding: 19px 25px;
+    }
+  }
+  .member-info {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    line-height: 1.7;
+    .info-item {
+      border-top: 2px solid $gray;
+      display: flex;
+      &:last-child {
+        border-bottom: 2px solid $gray;
+      }
+    }
+    .info-title {
+      width: 110px;
+      flex-shrink: 0;
+      border-right: 2px solid $gray;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 10px;
+      min-height: 72px;
+      font-size: 12px;
+      @include media(">=widescreen") {
+        align-items: flex-start;
+        font-size: 14px;
+        padding: 10px 10px 10px 17px;
+        min-height: 116px;
+        width: 130px;
+      }
+    }
+    .info-text {
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-shrink: 0;
+      padding: 10px 10px 10px 18px;
+      width: calc(100% - 110px);
+      line-height: 1.2;
+      @include media(">=widescreen") {
+        width: calc(100% - 130px);
+      }
+      span {
+        display: block;
+        margin-top: 10px;
+      }
+    }
+    .star-block {
+      font-weight: 700;
+      &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 4px;
+        margin-top: 2px;
+        width: 14px;
+        height: 14px;
+        background-size: contain;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-image: url("../images/icon-star.svg");
+
+        @include media(">=widescreen") {
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+  .member-footer {
+    padding: 19px 15px 0;
+    .skill-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0 -10px 4px 0;
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        margin: 0 10px 15px 0;
+        border: 1px solid $gray;
+        background: $light-gray;
+        padding: 6px 14px;
+        font-size: 12px;
+        color: $black-3;
+        line-height: 1.1;
+        font-weight: 500;
+      }
+    }
+    .btn {
+      padding-left: 15px;
+      padding-right: 15px;
+      margin: 0 -18px -2px;
+      width: calc(100% + 36px);
+      text-align: center;
+      &:before {
+        position: static;
+        transform: translate(0, 0);
+        margin-right: 10px;
+        margin-top: 6px;
+      }
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.member-work-slider {
+  .member-header {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 50px;
+  }
+  .member-image {
+    border-radius: 50%;
+    overflow: hidden;
+    line-height: 0;
+    margin-right: 18px;
+    img {
+      width: 100%;
+    }
+  }
+  .member-text {
+    line-height: 1.2;
+    padding-bottom: 5px;
+    .sub-name-block {
+      font-size: 12px;
+      margin-bottom: 4px;
+      display: block;
+    }
+    .name-block {
+      font-size: 16px;
+      font-weight: 600;
+      color: $green;
+      margin-bottom: 2px;
+    }
+    .position-block {
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+  }
+  .member-body {
+    border: 10px solid $gray-3;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    & > * {
+      max-width: 100%;
+      outline: none;
+    }
+    .caption-block {
+      font-size: 12px;
+      font-weight: 400;
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      z-index: 10;
+      color: $white;
+      @include media(">=tablet") {
+        color: $black;
+      }
+      @include media(">=widescreen") {
+        bottom: 17px;
+        right: 20px;
+      }
+      &:before {
+        content: '';
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: currentColor;
+        display: inline-block;
+        margin: 7px 10px 0 0;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+.sales-list-slider {
+  .sales-holder {
+    height: 100%;
+    border: 2px solid #eeebe5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    & > * {
+      width: 100%;
+    }
+  }
+  .sales-label {
+    margin: -2px -2px 0 auto;
+    width: 120px;
+    height: 49px;
+    padding: 5px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    text-align: center;
+    background: $gray;
+    color: $black;
+    font-weight: 600;
+    &.green-label {
+      background: $green;
+      color: $white;
+    }
+    &.black-label {
+      background: $black;
+      color: $white;
+    }
+  }
+  .sales-title {
+    height: 150px;
+    padding: 10px 15px;
+    background: rgba($gray, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 -2px 49px;
+    &.bg-red {
+      background: $red;
+    }
+    &.bg-green {
+      background: $green;
+    }
+    .title-block, .subtitle-block {
+      font-size: 16px;
+      font-weight: 400;
+      text-transform: uppercase;
+      max-width: 100%;
+      margin: 0;
+    }
+    .title-block {
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+  }
+  .text-block {
+    padding: 0 30px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.57;
+    margin-bottom: 30px;
+    p {
+      margin-bottom: 12px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .big-text-block {
+    text-align: center;
+    padding: 0 10px;
+    font-size: 44px;
+    margin-bottom: 27px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    color: $gray;
+    @include media(">=widescreen") {
+      font-size: 64px;
+    }
+    &.text-red {
+      color: $red;
+    }
+    &.text-green {
+      color: $red;
+    }
+  }
+  .btn {
+    width: calc(100% + 4px);
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    margin: 0 -2px;
+    &:before {
+      position: static;
+      transform: translate(0, 0);
+      margin-right: 10px;
+      margin-top: 6px;
+    }
+    &:after {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .info-member-section {
+    .title-global-section {
+      br {
+        display: none;
+      }
+    }
+  }
+}
+
+.work-slide-item {
+  background-color: transparent;
+  .work-slide-body {
+    padding: 6px;
+  }
+  .img-box {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.work-slider {
+  padding-bottom: 60px;
+  .slick-arrow {
+    position: absolute;
+    bottom: 0;
+    &.slick-next {
+      right: 10px;
+    }
+    &.slick-prev {
+      right: 107px;
+    }
+  }
+}
+
+.audio-container .audio-player {
+  position: absolute !important;
+  z-index: -100 !important;
+  opacity: 0 !important;
+}
+.fancybox-container * {
+  box-sizing: border-box !important;
+}
+.audio-container .audio-control {
+  padding: 0 !important;
+  position: relative !important;
+  background: white !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 33px !important;
+  width: 378px !important;
+  bottom: -279px !important;
+  left: 61px !important;
+}
+.audio-container .audio-play {
+  display: block !important;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  margin: 0 auto 30px !important;
+  background: #fff !important;
+  cursor: pointer !important;
+  position: relative !important;
+  transition: 0.3s !important;
+}
+.audio-container .audio-play:before {
+  content: "" !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 20px !important;
+  height: 22px !important;
+  background: linear-gradient(to right, #16CC8E 7px, #fff 7px, #fff 13px, #16CC8E 13px) !important;
+}
+@media (min-width: 768px){
+  .audio-container .audio-play:before {
+    width: 31px !important;
+    height: 32px !important;
+    background: linear-gradient(to right, #16CC8E 12px, #fff 12px, #fff 20px, #16CC8E 20px) !important;
+  }
+}
+.audio-container .audio-play:after {
+  content: "" !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: calc(50% + 3px) !important;
+  transform: translate(-50%, -50%) !important;
+  width: 0 !important;
+  height: 0 !important;
+  border-left: 20px solid #16CC8E !important;
+  border-bottom: 11px solid transparent !important;
+  border-top: 11px solid transparent !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+@media (min-width: 768px){
+  .audio-container .audio-play:after {
+    border-left: 11px solid #fff !important;
+    border-bottom: 7px solid transparent !important;
+    border-top: 7px solid transparent !important;
+    left: calc(40% + 5px) !important;
+  }
+}
+.audio-container .audio-play.pause:after {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.audio-container{
+  background-image: url("https://flocksy.com/wp-content/uploads/2022/12/voice-over-mockup-background-1.png") !important;
+  background-size: cover !important;
+  height: 415px !important;
+  max-width: 500px !important;
+  position: relative !important;
+}
+.popup-content .popup-audio-holder{
+  height: 415px !important;
+  max-width: 500px !important;
+}
+.audio-container .audio-control {
+  padding: 0 !important;
+  position: relative !important;
+  background: #Ffff !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 33px !important;
+  width: 378px !important;
+  bottom: -279px !important;
+  left: 61px !important;
+}
+.audio-container .volume-block .audio-mute{
+  background-image: url("https://flocksy.com/wp-content/uploads/2022/12/voice-over-mockup-1.png") !important;
+  background-size: 20px !important;
+  background-repeat: no-repeat !important;
+  background-position: 0 50% !important;
+  width: 20px !important;
+  height:20px !important;
+  margin-right: 10px !important;
+  cursor: pointer !important;
+}
+.audio-container .volume-block{
+  flex-flow: column-reverse !important;
+  background-color: transparent !important;
+  bottom: -18px !important;
+  left: 320px !important;
+  right: 0 !important;
+  z-index: 10 !important;
+}
+.audio-container .volume-block .audio-volume {
+  width: 87px !important;
+  height: 5px !important;
+  background: #fff !important;
+  transform: rotate(90deg) !important;
+  margin-bottom: 55px !important;
+  position: relative !important;
+  cursor: pointer !important;
+}
+@media (min-width: 768px){
+  .audio-container .audio-play {
+    width: 25px !important;
+    height: 25px !important;
+    background: #16CC8E !important;
+    top: 0 !important;
+    left: 0 !important;
+    margin: 0 10px !important;
+  }
+  .audio-container .audio-play:after {
+    border-left: 11px solid #fff !important;
+    border-bottom: 7px solid transparent !important;
+    border-top: 7px solid transparent !important;
+    left: calc(40% + 5px) !important;
+  }
+  .audio-container .audio-play:before{
+    background-color: #FFFFFF !important;
+
+  }
+  .audio-container .audio-play:before{
+    width: 14px !important;
+    height: 14px !important;
+    background: linear-gradient(to right, #16CC8E 5px, #fff 3px, #16CC8E 11px, #fff 11px) !important;
+    left: 43% !important;
+  }
+}
+
+.audio-container .audio-progress{
+  width: 250px !important;
+  height: 10px !important;
+  background: #e2dfd2 !important;
+  top: 0 !important;
+  left: -35px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  cursor: pointer !important;
+}
+.audio-container .audio-progress .slide-progress{
+  background: #16CC8E !important;
+}
+.popup-content .popup-audio-holder{
+  max-width: 500px !important !important;
+}
+.audio-container .volume-block {
+  flex-flow: column-reverse !important;
+  background-color: transparent !important;
+  bottom: -18px !important;
+  left: 320px !important;
+  right: 0 !important;
+  z-index: 10 !important;
+}
+.audio-container .volume-block {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 10 !important;
+  padding: 25px 0 !important;
+  background: #11bf84 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.audio-container .volume-block {
+  flex-flow: column-reverse !important;
+  background-color: transparent !important;
+  bottom: -18px !important;
+  left: 320px !important;
+  right: 0 !important;
+  z-index: 10 !important;
+}
+.audio-container .volume-block .audio-volume .audio-volume-range {
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  background: #e7e2db !important;
+}
+.audio-container .audio-play.pause:before {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}

@@ -1,0 +1,124 @@
+.team-slider-section{
+  margin-bottom: 91px;
+  @include media(">=widescreen") {
+    margin-bottom: 177px;
+  }
+  &.custom-team-slider-section{
+    margin-bottom: 80px;
+    @include media(">=desktop") {
+      margin-bottom: 180px;
+    }
+    .title-global-section{
+      margin-bottom: 59px;
+      @include media(">=widescreen") {
+        margin-bottom: 81px;
+      }
+    }
+  }
+  .title-global-section{
+    text-transform: capitalize;
+    margin-bottom: 53px;
+    @include media(">=widescreen") {
+      margin-bottom: 119px;
+    }
+  }
+}
+
+.custom-team-slider-section{
+  .team-slider-block{
+    margin-bottom: 82px;
+    @include media(">=desktop") {
+      margin-bottom: 116px;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+    .title-block{
+      margin-bottom: 49px;
+      @include media(">=desktop") {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .team-slider{
+    padding-bottom: 65px;
+    @include media(">=desktop") {
+      padding-bottom: 0;
+    }
+  }
+}
+.team-slider-block{
+  margin-bottom: 80px;
+  @include media(">=widescreen") {
+    margin-bottom: 120px;
+  }
+  &:last-child{
+    margin-bottom: 0;
+  }
+  .title-block{
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 40px;
+    @include media(">=desktop") {
+      margin-bottom: 0;
+      padding-right: 250px;
+    }
+  }
+}
+
+.team-slider{
+  padding-bottom: 56px;
+  margin: 0 -20px 0 -10px;
+  @include media(">=desktop") {
+    padding-top: 120px;
+    padding-bottom: 0;
+    margin: -27px -12px 0;
+  }
+  .slick-list{
+    padding-right: 62px;
+    @include media(">=desktop") {
+      padding-right: 0;
+    }
+  }
+  .slick-arrow{
+    position: absolute;
+    bottom: 0;
+    @include media(">=desktop") {
+      bottom: auto;
+      top: 0;
+    }
+    &.slick-prev{
+      right: 116px;
+    }
+    &.slick-next{
+      right: 20px;
+    }
+  }
+  .team-slide-item{
+    padding: 0 12px;
+  }
+  .image-holder{
+    margin-bottom: 35px;
+    @include media(">=widescreen") {
+      margin-bottom: 44px;
+    }
+  }
+  .name-block{
+    font-size: 20px;
+    font-weight: 500;
+    color: $black;
+    margin-bottom: 5px;
+    @include media(">=widescreen") {
+      font-size: 22px;
+    }
+  }
+  .position-block{
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba($black, 0.4);
+    @include media(">=widescreen") {
+        font-size: 21px;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'widescreen': 1200px,
+  'fullscreen': 1500px
+);
+
+// keywords
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+// ligatured operators ≥ ≤
+
+@import 'vendors/include-media';
+@import 'vendors/normalize';
+@import 'vendors/slick';
+@import 'vendors/jScrollPane';
+@import 'vendors/fancybox';
+
+@import 'base/variables';
+@import 'base/functions';
+@import 'base/mixins';
+@import 'base/helpers';
+@import 'base/reset';
+@import 'base/forms';
+@import 'base/typography';
+
+@import 'vendors/fonts';
+@import 'vendors/hamburger';
+
+@import 'layout/audio-container';
+@import 'sections/member';
+
+@import 'sections/scroll-holder-section';
+@import 'sections/custom-anchor-scroll-section';
+@import 'sections/box-section';
+@import 'sections/accordion/text-accordion-section';
+@import 'sections/portfolio-tabs-section';
+@import 'sections/column/column-text-image-section';
+@import 'sections/leader-section';
+@import 'sections/column/column-text-section';
+@import 'sections/column/column-default-section';
+@import 'sections/journey-section';
+@import 'sections/registration-section';
+@import 'sections/reviews-section';
+@import 'sections/service-banner-section';
+@import 'sections/values-section';
+@import 'sections/plan-section';
+@import 'sections/team-section';
+@import 'sections/contact-section';
+
+@import 'sections/accordion/accordion-default';
+@import 'sections/accordion/accordion-section';
+@import 'sections/accordion/accordion-tabs-section';
+
+
+@import 'sections/slider/testimonial-slider-section';
+@import 'sections/slider/team-slider-section';
+@import 'sections/slider/slider-animate-image-section';
+@import 'sections/slider/slider-image-section';
+@import 'sections/slider/info-member-section';
+
+
+@import 'sections/banners/hero-banner-section';
+@import 'sections/banners/logo-banner-section';
+@import 'sections/banners/banner-gray-section';
+@import 'sections/banners/how-works-section';
+@import 'sections/banners/get-started-section';
+@import 'sections/banners/get-help-section';
+@import 'sections/banners/hero-banner-column-section';
+@import 'sections/banners/column-banner-section';
+@import 'sections/banners/banner-green-section';
+@import 'sections/banners/banner-free-section';
+@import 'sections/banners/banner-statistic-section';
+@import 'sections/banners/image-banner-section';
+@import 'sections/banners/what-we-do-section';
+@import 'sections/banners/banner-green-text-section';
+@import 'sections/banners/banner-demo-section';
+
+
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/common';
+@import 'layout/buttons';
+@import 'layout/print';
+
+.resize-active {
+  * {
+    transition: none !important;
+  }
+}

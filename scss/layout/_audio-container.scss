@@ -1,0 +1,137 @@
+.audio-container{
+  width: 100%;
+  max-width: 390px;
+  background: $green;
+  text-align: center;
+  .audio-control{
+    padding: 28px 30px 113px;
+    position: relative;
+  }
+  .audio-player{
+    position: absolute;
+    z-index: -100;
+    opacity: 0;
+  }
+  .audio-play{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 auto 30px;
+    background: $white;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+    @include media(">=tablet") {
+      width: 88px;
+      height: 88px;
+    }
+    &:hover{
+      box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+    }
+    &.pause{
+      &:before{
+        opacity: 0;
+        visibility: hidden;
+      }
+      &:after{
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &:before{
+      content: '';
+      opacity: 1;
+      visibility: visible;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 22px;
+      background: linear-gradient(to right, $green 7px, $white 7px, $white 13px, $green 13px);
+      @include media(">=tablet") {
+        width: 31px;
+        height: 32px;
+        background: linear-gradient(to right, $green 12px, $white 12px, $white 20px, $green 20px);
+      }
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: calc(50% + 3px);
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      border-left: 20px solid $green;
+      border-bottom: 11px solid transparent;
+      border-top: 11px solid transparent;
+      opacity: 0;
+      visibility: hidden;
+      @include media(">=tablet") {
+        border-left: 31px solid $green;
+        border-bottom: 16px solid transparent;
+        border-top: 16px solid transparent;
+        left: calc(50% + 5px);
+      }
+    }
+  }
+  .audio-progress{
+    width: 180px;
+    height: 10px;
+    background: $white;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+    .slide-progress{
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background: #e7e2db;
+      display: inline-block;
+    }
+  }
+  .volume-block{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 25px 0;
+    background: #11bf84;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .audio-mute{
+      width: 20px;
+      height: 19px;
+      background-size: 20px;
+      background-repeat: no-repeat;
+      background-position: 0 50%;
+      background-image: url("../images/icon-mute.png");
+      margin-right: 10px;
+      cursor: pointer;
+      &.mute{
+        background-image: url("../images/icon-mute-off.png");
+      }
+    }
+    .audio-volume{
+      width: 60px;
+      height: 5px;
+      position: relative;
+      background: $white;
+      cursor: pointer;
+      .audio-volume-range{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background: #e7e2db;
+      }
+    }
+  }
+}

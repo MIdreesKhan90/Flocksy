@@ -1,0 +1,232 @@
+.portfolio-tabs-section{
+  margin-bottom: 30px;
+  @include media(">=widescreen") {
+    margin-bottom: 145px;
+  }
+
+  .spinner {
+    display: none;
+  }
+
+  .spinner > span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title-global-section{
+    margin-bottom: 40px;
+    @include media(">=widescreen") {
+      margin-bottom: 80px;
+    }
+  }
+}
+.portfolio-current-tabset{
+  padding: 31px 40px;
+  font-size: 20px;
+  font-weight: 500;
+  color: $black;
+  line-height: 1.3;
+  background-color: $light-gray;
+  outline: none;
+  margin: 0 -20px 40px;
+  position: relative;
+  @include media(">=desktop") {
+      display: none;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translate(0, -50%) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    border-right: 1px solid $black;
+    border-bottom: 1px solid $black;
+  }
+}
+.is-portfolio-tabset{
+  overflow: hidden;
+  @include media(">=desktop") {
+    overflow: visible;
+  }
+  .portfolio-scroll-tabset{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.portfolio-scroll-tabset{
+  background: $light-gray;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 90px 0 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  @include media(">=desktop") {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+    background: transparent;
+    margin-right: -20px;
+    padding-bottom: 40px !important;
+    margin-bottom: 19px;
+  }
+  @include media(">=widescreen") {
+    margin-right: calc(590px - 50vw);
+  }
+  .portfolio-tabset-close{
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    @include media(">=desktop") {
+      display: none;
+    }
+  }
+}
+
+.portfolio-tabset{
+  height: 100%;
+  overflow-y: auto;
+  @include media(">=desktop") {
+    overflow-y: visible;
+    display: flex;
+    align-items: center;
+  }
+
+
+  > li.open > ul.submenu {
+    display: block;
+    -webkit-transition: all .525s ease;
+    -moz-transition: all .525s ease;
+    -ms-transition: all .525s ease;
+    -o-transition: all .525s ease;
+    transition: all .525s ease;
+  }
+  .portfolio-tabset-item{
+    button{
+      display: block;
+      padding: 20px 40px;
+      font-size: 20px;
+      font-weight: 500;
+      color: $black-3;
+      line-height: 1.3;
+      border: none;
+      background: transparent;
+      outline: none;
+      @include media(">=desktop") {
+        white-space: nowrap;
+        padding: 31px 40px;
+      }
+      &.active{
+        color: $black;
+        @include media(">=desktop") {
+          background: $light-gray;
+        }
+      }
+    }
+  }
+}
+
+.portfolio-tab-content{
+  position: relative;
+  min-height: 600px;
+
+  .scroll-pane{
+    @include media(">=desktop") {
+        overflow: visible;
+    }
+  }
+  .jspTrack{
+    padding: 0 2px;
+    @include media(">=tablet") {
+      padding: 0;
+    }
+  }
+  .btn-block{
+    display: none;
+    @include media(">=desktop") {
+      display: block;
+      margin-top: 40px;
+    }
+    .btn{
+      min-width: 280px;
+      text-align: center;
+      padding-left: 15px;
+      padding-right: 15px;
+      &:before{
+        position: static;
+        margin-right: 10px;
+        margin-top: 6px;
+        transform: translate(0, 0);
+      }
+      &:after{
+        display: none;
+      }
+    }
+  }
+}
+
+.portfolio-scroll-content{
+  padding-bottom: 10px !important;
+  margin: 0 -20px;
+  @include media(">=desktop") {
+    padding-bottom: 0 !important;
+    margin: 0;
+  }
+}
+
+.portfolio-list{
+  display: flex;
+  align-items: stretch;
+  margin: 0 -5px;
+  @include media(">=desktop") {
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+  .portfolio-item{
+    padding: 0 5px;
+    max-width: 385px;
+    flex-shrink: 0;
+    @include media(">=desktop") {
+      padding: 0 5px;
+      max-width: 25%;
+    }
+  }
+  .portfolio-holder{
+    padding: 5px 0px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include media(">=desktop") {
+      padding: 5px 0px;
+      min-height: auto !important;
+    }
+    &.bg-black{
+      background: $black;
+    }
+    &:hover{
+      opacity: 0.75;
+    }
+    .image-block{
+      line-height: 0;
+      text-align: center;
+    }
+  }
+}

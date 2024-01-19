@@ -1,0 +1,103 @@
+.text-accordion-section{
+  margin-bottom: 100px;
+  @include media(">=tablet") {
+    margin-bottom: 150px;
+  }
+  @include media(">=widescreen") {
+    margin-bottom: 203px;
+  }
+  .title-global-section{
+    margin-bottom: 40px;
+    @include media(">=widescreen") {
+      margin-bottom: 90px;
+    }
+  }
+}
+
+.text-accordion-holder{
+  @include media(">=tablet") {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &.holder-right{
+    flex-direction: row-reverse;
+    .accordion-holder{
+      @include media(">=tablet") {
+        padding: 0 20px 0 0;
+      }
+      @include media(">=widescreen") {
+        padding: 0 60px 0 0;
+      }
+    }
+  }
+  &>.text-holder{
+    margin: 0 -20px 60px;
+    padding: 30px 20px 80px;
+    background: $light-gray;
+    @include media(">=tablet") {
+      margin: 0;
+      width: 100%;
+      max-width: 50%;
+    }
+    @include media(">=widescreen") {
+      max-width: 537px;
+      padding: 40px 50px 80px;
+    }
+    .image-block{
+      margin-bottom: 38px;
+    }
+    .title-block{
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      line-height: 1.4;
+      @include media(">=widescreen") {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 32px;
+      }
+    }
+    .text-block{
+      font-size: 16px;
+      line-height: 1.65;
+      color: $black-3;
+      p{
+        margin-bottom: 18px;
+        @include media(">=tablet") {
+          margin-bottom: 10px;
+        }
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  &>.accordion-holder{
+    width: 100%;
+    @include media(">=tablet") {
+      max-width: 50%;
+      padding: 0 0 0 20px;
+    }
+    @include media(">=widescreen") {
+      padding: 0 0 0 60px;
+      max-width: calc(100% - 537px);
+    }
+    .title-block{
+      color: $black-2;
+      margin-bottom: 36px;
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 700;
+      @include media(">=widescreen") {
+          font-size: 24px;
+      }
+    }
+  }
+  .accordion-default{
+    margin-bottom: 42px;
+    @include media(">=widescreen") {
+      margin-bottom: 65px;
+    }
+  }
+}

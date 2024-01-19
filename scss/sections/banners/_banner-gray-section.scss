@@ -1,0 +1,106 @@
+//.container-big{
+//  .banner-gray-section{
+//    .text-holder{
+//      @include media(">=fullscreen") {
+//          max-width: 610px;
+//      }
+//    }
+//    .image-holder{
+//      @include media(">=fullscreen") {
+//        margin: 0 -5px 0 -115px;
+//      }
+//      .lottie-custom{
+//        @include media(">=fullscreen") {
+//          width: 933px;
+//          height: 778px;
+//        }
+//      }
+//    }
+//    .title-block{
+//      @include media(">=fullscreen") {
+//        font-size: 64px;
+//        margin-bottom: 151px;
+//      }
+//    }
+//    .btn-group{
+//      .btn{
+//        @include media(">=fullscreen") {
+//          margin-right: 40px;
+//        }
+//      }
+//    }
+//  }
+//}
+
+.banner-gray-section{
+  position: relative;
+  padding: 80px 0 94px;
+  @include media(">=tablet") {
+    display: flex;
+    align-items: center;
+  }
+  @include media(">=widescreen") {
+    padding: 137px 0 144px;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120vw;
+    background: $bg-gray;
+    z-index: -1;
+    opacity: 0.4;
+  }
+  .text-holder{
+    width: 100%;
+    margin-bottom: 70px;
+    @include media(">=tablet") {
+      max-width: 50%;
+      margin-bottom: 0;
+    }
+    @include media(">=widescreen") {
+      max-width: 522px;
+      padding-bottom: 67px;
+    }
+  }
+  .image-holder{
+    width: 100%;
+    @include media(">=tablet") {
+      max-width: 50%;
+    }
+    @include media(">=widescreen") {
+      max-width: calc(100% - 478px);
+      margin: 0 -5px 0 -40px;
+    }
+    .lottie-custom{
+      width: 335px;
+      height: 280px;
+      margin: 0 auto;
+      @include media(">=desktop") {
+        width: 455px;
+        height: 387px;
+      }
+      @include media(">=widescreen") {
+        width: 658px;
+        height: 548px;
+      }
+    }
+  }
+  .title-block{
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 41px;
+    @include media(">=widescreen") {
+      font-size: 54px;
+      line-height: 1.16;
+      margin-bottom: 50px;
+    }
+    strong{
+      font-weight: 900;
+    }
+  }
+}

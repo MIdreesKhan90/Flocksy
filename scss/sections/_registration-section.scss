@@ -1,0 +1,86 @@
+.registration-section{
+  padding-top: 50px;
+  margin-bottom: 50px;
+  @include media(">=widescreen") {
+    padding-top: 76px;
+    margin-bottom: 95px;
+  }
+  .title-global-section{
+    margin-bottom: 30px;
+    width: 100%;
+    @include media(">=tablet") {
+        max-width: 50%;
+    }
+  }
+  .registration-column{
+    @include media(">=tablet") {
+      display: flex;
+      margin: 0 -15px;
+    }
+    @include media(">=widescreen") {
+      margin: 0 -60px;
+    }
+  }
+  .form-holder{
+    width: 100%;
+    margin-bottom: 50px;
+    @include media(">=tablet") {
+      max-width: 50%;
+      padding: 0 15px;
+    }
+    @include media(">=widescreen") {
+      padding: 0 60px;
+      max-width: 700px;
+    }
+    form{
+      margin-bottom: 50px;
+      @include media(">=widescreen") {
+        margin-bottom: 100px;
+      }
+      &:only-child{
+        margin-bottom: 0;
+      }
+    }
+    .text-holder{
+      font-weight: 600;
+      a.text-big{
+        color: inherit;
+        text-decoration: none;
+        &:hover{
+          color: $green;
+        }
+      }
+      .text-big{
+        font-size: 20px;
+      }
+      .btn{
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+        @include media(">=widescreen") {
+          margin-bottom: 30px;
+        }
+        &:before{
+          position: static;
+          transform: translate(0, 0);
+          margin-right: 10px;
+          margin-top: 6px;
+        }
+        &:after{
+          display: none;
+        }
+      }
+    }
+  }
+  .reviews-holder{
+    width: 100%;
+    @include media(">=tablet") {
+      max-width: 50%;
+      padding: 0 15px;
+    }
+    @include media(">=widescreen") {
+      padding: 0 60px;
+      max-width: calc(100% - 700px);
+    }
+  }
+}

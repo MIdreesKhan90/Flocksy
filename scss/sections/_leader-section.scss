@@ -1,0 +1,112 @@
+.leader-section{
+  margin-bottom: 57px;
+  @include media(">=widescreen") {
+    margin-bottom: 100px;
+  }
+  .title-global-section{
+    margin-bottom: 60px;
+    @include media(">=widescreen") {
+      margin-bottom: 80px;
+    }
+  }
+}
+.leader-list{
+  @include media(">=tablet") {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+  }
+  .leader-item{
+    width: 100%;
+    margin-bottom: 60px;
+    @include media(">=tablet") {
+      max-width: 50%;
+      padding: 0 20px;
+    }
+    @include media(">=widescreen") {
+      margin-bottom: 100px;
+    }
+    &:last-child{
+      margin-bottom: 0;
+      @include media(">=tablet") {
+        margin-bottom: 60px;
+      }
+      @include media(">=widescreen") {
+        margin-bottom: 100px;
+      }
+    }
+  }
+}
+
+.leader-item{
+  @include media(">=phone") {
+    display: flex;
+  }
+  @include media(">=tablet") {
+    display: block;
+  }
+  @include media(">=desktop") {
+    display: flex;
+  }
+  .image-holder{
+    width: 100%;
+    margin-bottom: 24px;
+    line-height: 0;
+    @include media(">=phone") {
+      max-width: 150px;
+      margin-bottom: 0;
+    }
+    @include media(">=tablet") {
+      margin-bottom: 20px;
+      max-width: 100%;
+    }
+    @include media(">=desktop") {
+      max-width: 280px;
+      margin-bottom: 0;
+    }
+    img{
+      width: 100%;
+    }
+  }
+  .text-holder{
+    width: 100%;
+    @include media(">=phone") {
+      padding: 0 0 0 20px;
+      max-width: calc(100% - 150px);
+    }
+    @include media(">=tablet") {
+      padding: 0;
+      max-width: 100%;
+    }
+    @include media(">=desktop") {
+      padding: 0 0 0 20px;
+      max-width: calc(100% - 280px);
+    }
+  }
+  .name-block{
+    font-size: 20px;
+    font-weight: 500;
+    font-family: $montserrat;
+    color: $black;
+    margin-bottom: 15px;
+    @include media(">=tablet") {
+      font-size: 22px;
+      margin-bottom: 11px;
+    }
+  }
+  .position-block{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: $montserrat;
+    color: rgba($black, 0.4);
+    margin-bottom: 14px;
+    @include media(">=tablet") {
+      font-size: 22px;
+    }
+  }
+  .text-block{
+    font-size: 16px;
+    line-height: 1.65;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,165 @@
+.reviews-slider-section {
+  margin-bottom: 80px;
+  .text-holder {
+    max-width: 100%;
+  }
+  .slide-text-body {
+    background: #faf9f7;
+    padding: 61px;
+    margin-top: 50px;
+    border-left: 6px solid $green;
+    @include media("<desktop") {
+      padding: 10px;
+      margin-top: 0;
+    }
+    .subtitle-block {
+      color: #53524e;
+      @include media("<desktop") {
+        font-size: 17px;
+      }
+    }
+    .flex {
+      display: flex;
+      justify-content: space-between;
+    }
+    .img-cont {
+      border-radius: 50%;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 10px 10px 0px rgba(10, 14, 16, 0.1);
+      width: 170px;
+      height: 170px;
+      margin-top: -146px;
+      overflow: hidden;
+      @include media("<desktop") {
+        min-width: 100px !important;
+        margin-top: -45px;
+        width: 100%;
+        height: 100px !important;
+        max-width: 100px;
+      }
+      picture {
+        width: 100%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  .slick-arrow {
+    position: absolute;
+    bottom: -50px;
+    z-index: 100;
+    @include media("<desktop") {
+      bottom: 20px;
+    }
+    &.slick-prev {
+      right: 178px;
+      left: auto !important;
+    }
+    &.slick-next {
+      right: 23px;
+      left: auto !important;
+    }
+  }
+  .slider-image {
+    .slide {
+      padding-top: 35px;
+      @include media("<tablet") {
+        padding-top: 61px;
+      }
+      @include media("<desktop") {
+        padding-top: 91px !important;
+      }
+    }
+  }
+}
+
+.reviews-slider-section {
+  .text-holder {
+    max-width: 100%;
+  }
+  .slide-text-body {
+    background: #faf9f7;
+    padding: 61px;
+    margin-top: 50px;
+    border-left: 6px solid $green;
+
+    @include media("<desktop") {
+      margin-top: 0;
+      padding: 10px;
+    }
+
+    .flex {
+      display: flex;
+      justify-content: space-between;
+    }
+    .img-cont {
+      border-radius: 50%;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0 10px 10px 0 rgba(10, 14, 16, 0.1);
+      width: 170px;
+      height: 170px;
+      margin-top: -146px;
+      overflow: hidden;
+      @include media("<tablet") {
+        margin-top: -70px;
+        width: 100%;
+        height: 100px;
+        max-width: 100px;
+      }
+      @include media("<desktop"){
+        width: 130px !important;
+        height: 130px;
+        margin-top: -100px;
+      }
+      picture {
+        width: 100%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  .slick-arrow {
+    @include media("<tablet") {
+      bottom: 40px !important;
+    }
+    &.slick-prev {
+      right: 178px;
+      left: auto !important;
+    }
+    &.slick-next {
+      right: px;
+      left: auto !important;
+    }
+  }
+  .slider-image {
+    .slide {
+      padding-top: 35px;
+
+      @include media("<tablet") {
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+    }
+  }
+  .subtitle-block {
+    @include media("<tablet") {
+      font-size: 17px;
+    }
+  }
+}
+
+.reviews-slider-section {
+  .slide-text-body {
+    .img-cont {
+      min-width: 170px !important;
+    }
+  }
+}

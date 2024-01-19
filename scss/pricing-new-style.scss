@@ -1,0 +1,111 @@
+$breakpoints: (
+        'xs-phone': 320px,
+        'phone': 480px,
+        'tablet': 768px,
+        'desktop': 1024px,
+        'widescreen': 1200px,
+        'fullscreen': 1500px
+);
+
+// keywords
+$media-expressions: (
+        'screen': 'screen',
+        'print': 'print',
+        'handheld': 'handheld',
+        'landscape': '(orientation: landscape)',
+        'portrait': '(orientation: portrait)',
+        'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+        'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+// ligatured operators ≥ ≤
+
+@import 'vendors/include-media';
+@import 'vendors/normalize';
+@import 'vendors/slick';
+@import 'vendors/jScrollPane';
+@import 'vendors/fancybox';
+
+@import 'base/variables';
+@import 'base/functions';
+@import 'base/mixins';
+@import 'base/helpers';
+@import 'base/reset';
+@import 'base/forms';
+@import 'base/typography';
+@import 'vendors/fonts';
+@import 'vendors/hamburger';
+
+@import 'sections/plan-section-new';
+@import 'sections/banners/column-banner-section';
+@import 'sections/banners/get-help-section';
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/common';
+@import 'layout/buttons';
+@import 'layout/print';
+
+.resize-active {
+  * {
+    transition: none !important;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  @include media("<desktop"){
+    justify-content: space-evenly;
+  }
+  @include media("<tablet") {
+    margin: 0;
+    flex-flow: column;
+  }
+
+  [class*="md-4"] {
+
+
+    @include media("<desktop") {
+      max-width: 50% !important;
+    }
+    @include media(">=desktop") {
+      flex: 1 0 33.33333%;
+      max-width: 33.33333%;
+    }
+    @include media("<tablet") {
+      max-width: 100% !important;
+    }
+  }
+}
+
+.list-none {
+  list-style: none;
+}
+
+.block {
+  display: block;
+}
+
+.height{
+  @include media("<desktop"){
+    min-height: auto !important;
+  }
+}
+.plan-tabs-card-after{
+  position: relative;
+
+  &::after{
+    content: "";
+    position: absolute;
+    width: 156px;
+    height: 100px;
+    background-image: url("https://flocksy.com/wp-content/uploads/2023/01/Untitled-1.png");
+    background-size: cover;
+    top: -69px;
+    left: 24%;
+    z-index: -1;
+  }
+}

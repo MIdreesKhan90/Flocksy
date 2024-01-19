@@ -1,0 +1,130 @@
+$breakpoints: (
+        'xs-phone': 320px,
+        'phone': 480px,
+        'tablet': 768px,
+        'desktop': 1024px,
+        'widescreen': 1200px,
+        'fullscreen': 1500px
+);
+
+// keywords
+$media-expressions: (
+        'screen': 'screen',
+        'print': 'print',
+        'handheld': 'handheld',
+        'landscape': '(orientation: landscape)',
+        'portrait': '(orientation: portrait)',
+        'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+        'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+// ligatured operators ≥ ≤
+
+@import 'vendors/include-media';
+@import 'vendors/normalize';
+@import 'vendors/slick';
+@import 'vendors/jScrollPane';
+@import 'vendors/fancybox';
+
+@import 'base/variables';
+@import 'base/functions';
+@import 'base/mixins';
+@import 'base/helpers';
+@import 'base/reset';
+@import 'base/forms';
+@import 'base/typography';
+
+@import 'vendors/fonts';
+@import 'vendors/hamburger';
+
+
+@import 'sections/slider/info-member-section';
+@import 'sections/slider/work-slider';
+@import 'sections/banners/banner-green-section';
+@import 'sections/banners/banner-free-section';
+@import 'sections/banners/banner-gray-section';
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/common';
+@import 'layout/buttons';
+@import 'layout/print';
+
+
+.banner-free-section{
+  padding-top: 30px;
+  @include media(">=tablet") {
+    padding-left: 190px;
+    padding-right: 190px;
+  }
+  h2.title-global-section{
+    @include media("<tablet") {
+      font-size: 30px;
+    }
+  }
+  h3.title-global-section{
+    font-size: 46px;
+  }
+  .banner-free-list{
+    @include media(">=tablet") {
+      margin-top: 90px;
+      margin-bottom: 90px;
+    }
+  }
+}
+
+.banner-statistic-section{
+  .column-item{
+    &.column-item-big{
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+
+
+
+
+
+.dots-ul{
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  @include media("<tablet"){
+    margin-left: 20px;
+  }
+  li{
+    position: relative;
+    padding-left: 20px;
+    @include media("<tablet"){
+      padding-left: 0;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0.6em;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      display: block;
+      border-radius: 50%;
+
+      @include media("<desktop"){
+       background: black;
+      }
+    }
+  }
+
+  &.green{
+    li{
+      &:before{
+        background-color: $green;
+        @include media("<desktop"){
+          background: black;
+        }
+      }
+    }
+  }
+}
+

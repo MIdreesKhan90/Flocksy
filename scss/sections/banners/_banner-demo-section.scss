@@ -1,0 +1,48 @@
+.banner-demo-section{
+  margin-bottom: 100px;
+  @include media(">=widescreen") {
+    margin-bottom: 152px;
+  }
+  .banner-demo-header{
+    margin-bottom: 50px;
+    @include media(">=widescreen") {
+      margin-bottom: 100px;
+    }
+  }
+  .title-global-section{
+    margin-bottom: 5px;
+  }
+  .text-block{
+    p{
+      margin-bottom: 20px;
+      @include media(">=widescreen") {
+        margin-bottom: 40px;
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  .column-list{
+    @include media(">=phone") {
+      display: flex;
+      align-items: center;
+      margin: 0 -20px;
+    }
+    @include media(">=widescreen") {
+      margin: 0 -39px;
+    }
+  }
+  .column-item{
+    width: 100%;
+    margin-bottom: 20px;
+    @include media(">=phone") {
+      max-width: 50%;
+      padding: 0 20px;
+      margin-bottom: 0;
+    }
+    @include media(">=widescreen") {
+      padding: 0 39px;
+    }
+  }
+}
